@@ -12,59 +12,6 @@ body {
     background-attachment: fixed;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: blue;
-    
-    color: white;
-    z-index: 1000;
-}
-
-.nav-links {
-    
-    margin-top: 65px;
-    list-style: none;
-    display: flex;
-    gap: 1px;
-}
-
-.nav-links a {
-    display: inline-block;
-    padding: 8px 15px;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    color: #facc15;
-    text-decoration: underline;
-    text-decoration-color: #facc15;
-    text-decoration-thickness: 2px;
-}
-
-.nav-links a.active {
-    color: #facc15;
-    text-decoration: underline;
-    text-decoration-color: #facc15;
-    text-decoration-thickness: 2px;
-}
-
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-}
-
 main {
     min-height: 80vh;
     padding: 130px 20px 50px;
@@ -348,21 +295,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
+    
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background-color: blue;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
+    
 
     .nav-links.active {
         display: flex;

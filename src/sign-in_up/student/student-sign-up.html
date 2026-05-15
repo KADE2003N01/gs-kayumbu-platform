@@ -6,16 +6,20 @@
     <title>Student Sign Up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="student-sign-up.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="stylesheet" href="../../navbar.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
 <header>
     <nav class="navbar">
-        <div class="logo-name">
+        <a href="../../index.html" class="logo-name">
             <img src="../../media/school1.jpeg" alt="School Logo" class="logo">
-        </div>
+            <div class="school-title">
+                <span>GS KAYUMBU/TSS</span>
+                <span>Excellence in Education</span>
+            </div>
+        </a>
         <div class="hamburger" id="hamburger">☰</div>
         <ul class="nav-links" id="navLinks">
             <li><a href="../../index.html">Home</a></li>
@@ -23,9 +27,9 @@
             <li><a href="../../academics/academics.html">Academics</a></li>
             <li><a href="../../admissions/admissions.html">Admissions</a></li>
             <li><a href="../../event/event.html">Events</a></li>
-            <li><a href="../../studentlife/life.html">Student Life</a></li>
-            <li><a href="../../studentportal/studentPortal.html" class="active">Student Portal</a></li>
-            <li><a href="../../staffPortal/LeaderHome.html">Staff Portal</a></li>
+            <li><a href="../../studentlife/life.html">Lifestyle</a></li>
+            <li><a href="../../studentportal/studentPortal.html" class="active">Student</a></li>
+            <li><a href="../../staffPortal/LeaderHome.html">Staff</a></li>
         </ul>
     </nav>
 </header>
@@ -71,20 +75,6 @@
                 </div>
 
                 <button type="submit" class="btn-signup">Create Account</button>
-
-                <div class="divider">Or</div>
-
-                <div id="g_id_onload"
-                    data-client_id="102192163411-52noi016puq2v5n60adv810es71a18fp.apps.googleusercontent.com"
-                    data-context="signup"
-                    data-callback="handleCredentialResponse">
-                </div>
-
-                <div class="g_id_signin"
-                    data-type="standard"
-                    data-text="signup_with"
-                    data-size="large">
-                </div>
             </form>
 
             <p class="signin-link">Already have an account? <a href="student-sign-in.html">Sign In</a></p>
@@ -154,24 +144,6 @@
             return false;
         }
         return true;
-    }
-
-    // Google Sign In
-    function handleCredentialResponse(response) {
-        fetch('../RegisterServlet', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: 'google_token=' + response.credential + '&role=student'
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.success) {
-                window.location.href = '../../studentPortal/dashboard.html';
-            } else {
-                alert('Registration failed: ' + data.message);
-            }
-        })
-        .catch(err => alert('Error: ' + err));
     }
 </script>
 

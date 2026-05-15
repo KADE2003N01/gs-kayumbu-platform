@@ -10,55 +10,6 @@ body {
     line-height: 1.6;
 }
 
-/* NAVBAR */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: blue;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
-
-.logo {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-}
-
-.hamburger {
-    display: none;
-    font-size: 1.8rem;
-    color: white;
-    cursor: pointer;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
-    display: inline-block;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #facc15;
-    text-decoration: underline;
-    text-decoration-color: #facc15;
-    text-decoration-thickness: 2px;
-}
-
 /* HERO */
 .hero {
     background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.8)), url('../media/school1.jpeg');
@@ -543,7 +494,6 @@ footer {
     text-align: center;
 }
 
-
 .footer-section ul li {
     margin-bottom: 12px;
 }
@@ -593,37 +543,17 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
     
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 90px;
-        left: 0;
-        right: 0;
-        background-color: blue;
-        padding: 0;
-        gap: 0;
-    }
+    
+    
     
     .nav-links.active {
         display: flex;
     }
     
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-       background-color: blue;
-    }
     
-    .nav-links a {
-        background-color: blue;
-        display: block;
-        padding: 1rem;
-    }
+    
+    
     
     .hero {
         height: 300px;
