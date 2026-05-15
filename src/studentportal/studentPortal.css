@@ -40,6 +40,9 @@ main {
 .portal-container {
     max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+    padding: 0 20px;
 }
 
 .portal-cards {
@@ -118,7 +121,21 @@ main {
 .guidance-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0;
+    gap: 2rem;
+}
+
+.portal-card {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.intro-section {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .guidance-card {
@@ -239,6 +256,19 @@ footer {
 
     .nav-links.active {
         display: flex;
+    }
+
+    .portal-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-section {
+        padding: 30px 20px;
+    }
+
+    .guidance-grid {
+        grid-template-columns: 1fr;
     }
 
     .guidance-grid {
