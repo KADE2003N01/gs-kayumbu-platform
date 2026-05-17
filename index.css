@@ -33,11 +33,13 @@ body {
 main {
   width: 100%;
   max-width: 1200px;
-  margin: 130px auto 30px;
+  margin: 30px auto;
   padding: 0 20px;
 }
 /* --- Hero Section Styling --- */
 .hero-section {
+    width: 100%;
+    margin: 0;
     position: relative;
     min-height: 50vh;
     background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.85)), url('src/media/school1.jpeg');
@@ -54,9 +56,9 @@ main {
 }
 
 .hero-content {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .hero-content h1 {
@@ -69,7 +71,7 @@ main {
 
 .hero-content p {
     font-size: clamp(1.1rem, 2vw, 1.3rem);
-    color: rgba(255, 255, 255, 0.95);
+    color: black;
     margin-bottom: 32px;
     line-height: 1.6;
 }
@@ -78,7 +80,7 @@ main {
 .hero-buttons {
     display: flex;
     gap: 15px;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -303,7 +305,7 @@ main {
 @media (max-width: 768px) {
   /* --- Hero Section Styling --- */
 .hero-section {
-    margin-top:100px;
+    margin-top: 0;
     padding: 20px;
     border-radius: 5px;
     position: relative;
@@ -315,8 +317,8 @@ main {
     background-attachment: fixed;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     color: white;
 }
 
@@ -328,8 +330,9 @@ main {
 
 .hero-content p {
     font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
+    color: black;
+    max-width: none;
+    margin: 0 0 32px;
     line-height: 1.6;
 }
 
@@ -338,7 +341,7 @@ main {
     
     display: flex;
     gap: 8px;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -401,7 +404,7 @@ main {
 @media (max-width: 480px) {
   .hero-section {
     min-height: 40vh;
-    margin-top: 80px;
+    margin-top: 0;
   }
 
   .hero-overlay {

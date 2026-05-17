@@ -18,13 +18,17 @@ body {
     height: 350px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 90px;
+    justify-content: flex-start;
+    margin-top: 0;
 }
 
 .hero-overlay {
-    text-align: center;
+    text-align: left;
     color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .hero h1 {
@@ -34,6 +38,7 @@ body {
 
 .hero p {
     font-size: 1.2rem;
+    color: black;
 }
 
 /* CONTENT SECTIONS */

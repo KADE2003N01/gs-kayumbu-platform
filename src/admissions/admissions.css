@@ -41,6 +41,7 @@ body {
 .hero p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
+    color: black;
 }
 
 .btn-apply {
