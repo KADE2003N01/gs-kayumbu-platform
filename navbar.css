@@ -14,8 +14,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    height: 100px;
-    z-index: 1000;
+    min-height: 100px;
+    z-index: 9999;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     border-bottom: 2px solid rgba(250, 204, 21, 0.4);
 }
@@ -31,7 +31,6 @@
 
 a.logo-name {
     text-decoration: none;
-    outline: none;
 }
 
 .logo {
@@ -92,7 +91,6 @@ a.logo-name {
 }
 
 .nav-links a:hover {
-    background: none;
     text-decoration: underline;
     text-decoration-color: #22c55e;
     text-underline-offset: 8px;
@@ -100,7 +98,6 @@ a.logo-name {
 
 .nav-links a.active {
     color: #22c55e;
-    background: none;
     border-bottom: none;
 }
 
@@ -127,11 +124,17 @@ a.logo-name {
 @media (max-width: 900px) {
     .navbar {
         padding: 0 20px;
+        min-height: 80px;
     }
 
     .nav-links a {
         font-size: 0.95rem;
         padding: 7px 10px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -140,14 +143,19 @@ a.logo-name {
         display: block;
     }
 
+    .logo {
+        width: 65px;
+        height: 65px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
         width: 100%;
-        background: linear-gradient(180deg, #0f2460, #1e3a8a);
+        background: #1e3a8a;
         padding: 10px 0 16px;
         gap: 2px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -167,13 +175,12 @@ a.logo-name {
         text-align: left;
         margin-left: 0px;
         padding: 12px 20px;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         border-radius: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .nav-links a:hover {
-        background: none;
         text-decoration: underline;
         text-decoration-color: #22c55e;
         text-underline-offset: 4px;
@@ -181,14 +188,34 @@ a.logo-name {
 
     .nav-links a.active {
         color: #22c55e;
-        background: none;
     }
 
     .school-title span:first-child {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .school-title span:last-child {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        min-height: 70px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .school-title span:first-child {
+        font-size: 0.7rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 10px 20px;
     }
 }

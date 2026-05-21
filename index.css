@@ -12,22 +12,7 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
 }
-
-.logo-name .school-name{
-  text-align: center;
-  width: 100px;
-}
-
-/* Hide hamburger on desktop */
-
-.logo-section {
-  display: flex;
-  align-items: center;
-}
-
-/* Hide hamburger on desktop */
 
 /*                 ALL MAIN BODY                               */
 main {
@@ -363,22 +348,6 @@ main {
     display: flex; /* Show links when hamburger clicked */
   }
   
-}
-
-@media (max-width: 800px) {
-  
-  
-  
-}
-
-/*responiveness for the main section*/
-
-.school-details-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px 0;
-  margin: 0;
 }
 
 /* Tablet */
